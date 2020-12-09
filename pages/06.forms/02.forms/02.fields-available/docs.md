@@ -457,10 +457,13 @@ header.some_field:
   default: my-value
 [/prism]
 
+!! The POST data of the hidden field can be modified by the client! Make sure to not rely any important data here!
+
 [div class="table table-keycol"]
 | Attribute | Description                                                                                                                     |
 | :-----    | :-----                                                                                                                          |
 | `name`    | The field name. If missing, the field name is got from the field definition element (in the example above: `header.some_field`) |
+| `evaluate` | Enable twig processing for default value, e.g.: `evaluate: true` and `default: 'page.title|e'`. |
 [/div]
 
 [div class="table"]
